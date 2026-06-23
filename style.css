@@ -988,6 +988,18 @@ nav::before {
   grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
+.form-status {
+  margin: 4px 0 0;
+  min-height: 1.2em;
+  font-size: 14px;
+  font-weight: 600;
+}
+.form-status.ok {
+  color: #46d369;
+}
+.form-status.err {
+  color: #ff5c5c;
+}
 
 /* FOOTER */
 footer {
@@ -1126,9 +1138,14 @@ footer {
 
   .hero {
     padding: 100px 24px 60px;
+    justify-content: flex-start; /* stack from the top */
+    align-items: center; /* center the card + planet */
+    overflow: visible; /* let the stacked content grow instead of clipping */
   }
   .hero-card {
-    padding: 40px 28px 220px;
+    order: 1; /* card on top … */
+    margin-top: 0;
+    padding: 36px 28px 38px;
   }
   .hero-footer {
     padding: 20px 28px;
@@ -1165,16 +1182,37 @@ footer {
     border-width: 10px;
   }
   .globe-wrap {
-    width: 320px;
-    height: 320px;
+    /* Drop out of absolute positioning and into the flow, placed AFTER the card
+       (order: 2) so the planet always sits below the TechnoArt Studio card,
+       however tall the card gets. position: relative keeps the glow anchored. */
+    order: 2;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 40px 0 0;
+    width: 300px;
+    height: 300px;
   }
   .globe {
-    --tile: 640px;
+    --tile: 600px;
   }
   .form-row {
     grid-template-columns: 1fr;
   }
   .divider {
     margin: 0 24px;
+  }
+}
+
+/* Narrow phones: shrink the planet and re-seat the card just below it. */
+@media (max-width: 480px) {
+  .globe-wrap {
+    width: 240px;
+    height: 240px;
+    margin-top: 32px;
+  }
+  .globe {
+    --tile: 480px;
   }
 }

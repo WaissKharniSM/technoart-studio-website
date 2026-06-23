@@ -167,7 +167,7 @@
               class="port-logo"
               src="assets/logos/mecca-energy.png"
               alt="Mecca Energy"
-              onerror="this.style.display='none'"
+              onerror="this.style.display = 'none'"
             />
             <div class="port-title">Mecca Energy</div>
           </div>
@@ -189,7 +189,7 @@
               class="port-logo"
               src="assets/logos/sarvam-yogalayam.png"
               alt="Sarvam Yogalayam"
-              onerror="this.style.display='none'"
+              onerror="this.style.display = 'none'"
             />
             <div class="port-title">Sarvam Yogalayam</div>
           </div>
@@ -211,7 +211,7 @@
               class="port-logo"
               src="assets/logos/suhani-fashion-world.png"
               alt="Suhani Fashion World"
-              onerror="this.style.display='none'"
+              onerror="this.style.display = 'none'"
             />
             <div class="port-title">Suhani Fashion World</div>
           </div>
@@ -233,7 +233,7 @@
               class="port-logo"
               src="assets/logos/page27.png"
               alt="Page27"
-              onerror="this.style.display='none'"
+              onerror="this.style.display = 'none'"
             />
             <div class="port-title">Page27</div>
           </div>
@@ -255,7 +255,7 @@
               class="port-logo"
               src="assets/logos/hashtag-chumma-kizhi.png"
               alt="Hashtag Chumma Kizhi"
-              onerror="this.style.display='none'"
+              onerror="this.style.display = 'none'"
             />
             <div class="port-title">Hashtag Chumma Kizhi</div>
           </div>
@@ -277,13 +277,15 @@
               class="port-logo"
               src="assets/logos/protein-pasanga.png"
               alt="Protein Pasanga"
-              onerror="this.style.display='none'"
+              onerror="this.style.display = 'none'"
             />
             <div class="port-title">Protein Pasanga</div>
           </div>
           <div class="port-overlay">
             <div class="port-tag">Logo & Video</div>
-            <div class="port-desc">Gym & Fitness — Logo Design & Video Editing</div>
+            <div class="port-desc">
+              Gym & Fitness — Logo Design & Video Editing
+            </div>
             <span class="port-link">@protein_pasanga ↗</span>
           </div>
         </a>
@@ -299,7 +301,7 @@
               class="port-logo"
               src="assets/logos/spring-buds-blossoms.png"
               alt="Spring Buds & Blossoms"
-              onerror="this.style.display='none'"
+              onerror="this.style.display = 'none'"
             />
             <div class="port-title">Spring Buds & Blossoms</div>
           </div>
@@ -318,13 +320,15 @@
               class="port-logo"
               src="assets/logos/k-square.png"
               alt="K Square"
-              onerror="this.style.display='none'"
+              onerror="this.style.display = 'none'"
             />
             <div class="port-title">K Square</div>
           </div>
           <div class="port-overlay">
             <div class="port-tag">Branding</div>
-            <div class="port-desc">Swimming Pool — Branding & Logo Development</div>
+            <div class="port-desc">
+              Swimming Pool — Branding & Logo Development
+            </div>
           </div>
         </div>
         <div class="port-item">
@@ -334,7 +338,7 @@
               class="port-logo"
               src="assets/logos/tindle.png"
               alt="Tindle"
-              onerror="this.style.display='none'"
+              onerror="this.style.display = 'none'"
             />
             <div class="port-title">Tindle</div>
           </div>
@@ -350,7 +354,7 @@
               class="port-logo"
               src="assets/logos/book-my-water.png"
               alt="Book My Water"
-              onerror="this.style.display='none'"
+              onerror="this.style.display = 'none'"
             />
             <div class="port-title">Book My Water</div>
           </div>
@@ -366,7 +370,7 @@
               class="port-logo"
               src="assets/logos/flavours-of-india.png"
               alt="Flavours of India"
-              onerror="this.style.display='none'"
+              onerror="this.style.display = 'none'"
             />
             <div class="port-title">Flavours of India</div>
           </div>
@@ -495,36 +499,84 @@
           </div>
         </div>
       </div>
-      <div class="contact-form reveal">
+      <form
+        class="contact-form reveal"
+        id="contactForm"
+        action="https://api.web3forms.com/submit"
+        method="POST"
+      >
+        <!-- Get a free access key in seconds at https://web3forms.com (enter your
+             email, they send the key). Paste it below — submissions are emailed to you. -->
+        <input
+          type="hidden"
+          name="access_key"
+          value="04f8f29f-583a-4f26-8ced-79fbabe5a0b3"
+        />
+        <input
+          type="hidden"
+          name="subject"
+          value="New enquiry from TechnoArt Studio website"
+        />
+        <input type="hidden" name="from_name" value="TechnoArt Studio" />
+        <!-- Honeypot: bots fill this hidden field; real visitors never see it. -->
+        <input
+          type="checkbox"
+          name="botcheck"
+          style="display: none"
+          tabindex="-1"
+          autocomplete="off"
+        />
         <div class="form-row">
           <div class="form-group">
-            <label>Name</label>
-            <input type="text" placeholder="Your name" />
+            <label for="cf-name">Name</label>
+            <input
+              id="cf-name"
+              type="text"
+              name="name"
+              placeholder="Your name"
+              required
+            />
           </div>
           <div class="form-group">
-            <label>Email</label>
-            <input type="email" placeholder="your@email.com" />
+            <label for="cf-email">Email</label>
+            <input
+              id="cf-email"
+              type="email"
+              name="email"
+              placeholder="your@email.com"
+              required
+            />
           </div>
         </div>
         <div class="form-group">
-          <label>Service</label>
-          <input type="text" placeholder="Branding, UI/UX, Motion..." />
+          <label for="cf-service">Service</label>
+          <input
+            id="cf-service"
+            type="text"
+            name="service"
+            placeholder="Branding, UI/UX, Motion..."
+          />
         </div>
         <div class="form-group">
-          <label>Message</label>
+          <label for="cf-message">Message</label>
           <textarea
+            id="cf-message"
+            name="message"
             rows="5"
             placeholder="Tell us about your project..."
+            required
           ></textarea>
         </div>
-        <button
-          class="btn"
-          style="align-self: flex-start"
-          onclick="alert('Message sent! We\'ll be in touch soon.')"
-        >
+        <button type="submit" class="btn" style="align-self: flex-start">
           Send Message →
         </button>
-      </div>
+        <p
+          id="formStatus"
+          class="form-status"
+          role="status"
+          aria-live="polite"
+        ></p>
+      </form>
     </section>
 
     <!-- FOOTER -->
@@ -660,6 +712,52 @@
             li.classList.add("active");
         });
       });
+
+      // Contact form -> Web3Forms (AJAX submit; visitor stays on the page)
+      const contactForm = document.getElementById("contactForm");
+      if (contactForm) {
+        const statusEl = document.getElementById("formStatus");
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        contactForm.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          // Native HTML5 validation (required fields, valid email) first.
+          if (!contactForm.checkValidity()) {
+            contactForm.reportValidity();
+            return;
+          }
+          const originalLabel = submitBtn.textContent;
+          submitBtn.disabled = true;
+          submitBtn.style.opacity = "0.6";
+          submitBtn.textContent = "Sending…";
+          statusEl.className = "form-status";
+          statusEl.textContent = "";
+          try {
+            const res = await fetch(contactForm.action, {
+              method: "POST",
+              headers: { Accept: "application/json" },
+              body: new FormData(contactForm),
+            });
+            const data = await res.json();
+            if (res.ok && data.success) {
+              statusEl.textContent = "Message sent — we'll be in touch soon.";
+              statusEl.classList.add("ok");
+              contactForm.reset();
+            } else {
+              statusEl.textContent =
+                data.message || "Something went wrong. Please try again.";
+              statusEl.classList.add("err");
+            }
+          } catch {
+            statusEl.textContent =
+              "Network error — please check your connection and try again.";
+            statusEl.classList.add("err");
+          } finally {
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = "";
+            submitBtn.textContent = originalLabel;
+          }
+        });
+      }
     </script>
   </body>
 </html>
